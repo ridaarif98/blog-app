@@ -1,11 +1,11 @@
 class Like < ApplicationRecord
-    belongs_to :user
-    belongs_to :post
+  belongs_to :user
+  belongs_to :post
 
-    # Registers a callback to be called after a record is created
-    after_create :update_like_counter
+  # Registers a callback to be called after a record is created
+  after_create :update_like_counter
 
-    def update_like_counter
-        post.update(likes_counter: post.likes.size)
-    end
+  def update_like_counter
+    post.update(likes_counter: post.likes.size)
+  end
 end
