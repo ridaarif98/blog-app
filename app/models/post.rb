@@ -3,11 +3,11 @@ class Post < ApplicationRecord
     has_many :likes, dependent: :destroy
     has_many :comments, dependent: :destroy
 
-    # A method that updates the posts counter for a user.
+    # Registers a callback to be called after a record is created
     after_create :update_post_counter
 
     def update_post_counter
-        user.update(user.posts_counter: user.posts.size)
+        user.update(posts_counter: user.posts.size)
     end
 
     def recent_comments
