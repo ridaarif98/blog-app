@@ -18,6 +18,12 @@ rida_comment_one =  Comment.create(text: "I really like this post", user:rida, p
 rida_comment_two =  Comment.create(text: "I really like this post", user:rida, post: rida_post_two)
 rida_comment_three =  Comment.create(text: "I really like this post", user:rida, post: rida_post_three)
 rida_comment_four =  Comment.create(text: "I really like this post", user:rida, post: rida_post_four)
+rida_comment_five =  Comment.create(text: "I really like this post", user:rida, post: rida_post_four)
+rida_comment_six =  Comment.create(text: "I really like this post", user:rida, post: rida_post_four)
+rida_comment_seven =  Comment.create(text: "I really like this post", user:rida, post: rida_post_four)
+rida_comment_eight =  Comment.create(text: "I really like this post", user:rida, post: rida_post_four)
+rida_comment_nine =  Comment.create(text: "I really like this post", user:rida, post: rida_post_four)
+rida_comment_ten =  Comment.create(text: "I really like this post", user:rida, post: rida_post_four)
 
 rida_like_one = Like.create(user: rida, post: rida_post_one)
 rida_like_two = Like.create(user: rida, post: rida_post_two)

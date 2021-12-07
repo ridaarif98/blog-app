@@ -28,10 +28,25 @@ To get a local copy up and running follow these simple example steps.
 ```sh
 bundle install
 ```
+```
+yarn install
+```
 
 ### Run
 
-```sh
+```
+rails db: create
+```
+
+```
+$ rails db:migrate
+```
+
+```
+$ rails db:seed
+```
+
+```
 rails s
 ```
 

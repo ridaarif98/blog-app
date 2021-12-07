@@ -12,7 +12,7 @@
         <% end %>
         </li>
         <div class="<%= comments?(post)%> user-comments">
-            <% post.comments.each do |comment|%>
+            <% post.recent_comments.each do |comment|%>
                 <p>
                     <%=comment.user.name%> :
                     <%= comment.text%>
