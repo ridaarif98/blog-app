@@ -15,114 +15,114 @@
  */
 
 .user-main {
-	list-style-type: none;
-	margin-top: 20px;
-	width: 80%;
-	margin-left: 10%;
-	margin-right: 10%;
+  list-style-type: none;
+  margin-top: 20px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .user-main li {
   display: flex;
-	flex-direction: row;
-	margin: 10px;
+  flex-direction: row;
+  margin: 10px;
 }
 
 .user-main a {
-	text-decoration: none;
-	color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .user-main img {
-	margin: 10px;
-	padding: 10px;
-	border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
 }
 
- .user-main div {
-	display: flex;
-	flex-direction: column;
-	border: 1px solid black;
-	width: 60%;
-	padding: 20px;
-	margin: 10px;
- }
+.user-main div {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 60%;
+  padding: 20px;
+  margin: 10px;
+}
 
 .user-main div p {
-	display: flex;
-	flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .user-main .user-bio {
-	display: flex;
-	flex-direction: column;
-	width: 80%;
-	margin: 10px;
-	padding: 10px;
-	border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
 }
 
 .user-main .post-all {
-	display: flex;
-	flex-direction: column;
-	width: 80%;
-	margin: 10px 10px 0 10px;
-	padding: 10px;
-	border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 10px 10px 0 10px;
+  padding: 10px;
+  border: 1px solid black;
 }
 
 .user-main .user-comments,
 .show-post .user-comments {
-	display: flex;
-	flex-direction: column;
-	width: 80%;
-	margin-top: 0;
-	margin-bottom: 20px;
-	padding: 10px;
-	border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid black;
 }
 
 .user-main .post-all .show-li {
-	display: flex;
-	flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .user-main .user-comments p {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .btn {
-	display: flex;
-	width: 150px;
-	padding: 5px 10px;
-	margin-top: 20px;
-	margin-left: 40%;
+  display: flex;
+  width: 150px;
+  padding: 5px 10px;
+  margin-top: 20px;
+  margin-left: 40%;
 }
 
 .btn a {
-	text-decoration: none;
-	font-size: 20px;
-	color: black;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
 }
 
 .show-post {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin: 30px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 5%;
 }
 
 .show-post .show-post-user {
-	display: flex;
-	flex-direction: column;
-	padding: 10px;
-	border: 1px solid black;
-	width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid black;
+  width: 80%;
 }
 
 .show-post .show-post-user div {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
