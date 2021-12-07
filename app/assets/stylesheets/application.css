@@ -14,16 +14,16 @@
  *= require_self
  */
 
- .user-main {
+.user-main {
 	list-style-type: none;
 	margin-top: 20px;
 	width: 80%;
 	margin-left: 10%;
 	margin-right: 10%;
- }
+}
 
 .user-main li {
-	display: flex;
+  display: flex;
 	flex-direction: row;
 	margin: 10px;
 }
