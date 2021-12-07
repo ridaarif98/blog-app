@@ -1,17 +1,17 @@
 <%= render @user %>
 
-<ul>
+<ul class="user-main">
     <% @posts.each_with_index do |post, i|%>
-        <li>
+        <li class="post-all">
         <%= link_to user_post_path(@user.id, post.id) do%>
         
-            <p>Post #<%=i+1%></p>
+            <h4>Post #<%=i+1%></h4>
             <p><%= post.text%></p>
-            <p>Coments : <%= post.comments_counter.to_i%> </p>
-            <p>Likes : <%= post.likes_counter.to_i %> </p>
+            <p class="show-li">Coments : <%= post.comments_counter.to_i%>  Likes : <%= post.likes_counter.to_i %> </p>
+
         <% end %>
         </li>
-        <div class="<%= comments?(post)%>">
+        <div class="<%= comments?(post)%> user-comments">
             <% post.comments.each do |comment|%>
                 <p>
                     <%=comment.user.name%> :
