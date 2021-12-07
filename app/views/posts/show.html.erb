@@ -1,2 +1,20 @@
 <h1>Here is detail of a post</h1>
+<div>
+    <p>
+      Post by:   <%= @post.user.name%>
+    </p>
+    <p>Comments: <%=@post.comments_counter.to_i%></p>
+    <p>Likes: <%=@post.likes_counter.to_i%></p>
+
+    <p><%=@post.text%></p>
+    <ul class="<%= comments?(@post)%>">
+            <% @post.comments.each do |comment|%>
+                <li>
+                    <%=comment.user.name%> :
+                    <%= comment.text%>
+                </li>
+            <%end%>
+    </ul>
+
+</div>
 
