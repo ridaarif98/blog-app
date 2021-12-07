@@ -1,1 +1,23 @@
-<h1>Here is the list of all posts of a user</h1>
+<%= render @user %>
+
+<ul class="user-main">
+    <% @posts.each_with_index do |post, i|%>
+        <li class="post-all">
+        <%= link_to user_post_path(@user.id, post.id) do%>
+        
+            <h4>Post #<%=i+1%></h4>
+            <p><%= post.text%></p>
+            <p class="show-li">Coments : <%= post.comments_counter.to_i%>  Likes : <%= post.likes_counter.to_i %> </p>
+
+        <% end %>
+        </li>
+        <div class="<%= comments?(post)%> user-comments">
+            <% post.recent_comments.each do |comment|%>
+                <p>
+                    <%=comment.user.name%> :
+                    <%= comment.text%>
+                </p>
+            <%end%>
+        </div>
+    <%end%>
+</ul>
