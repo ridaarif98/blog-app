@@ -126,3 +126,54 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+.btn-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.btn-div button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.btn-div .back-btn {
+  width: 150px;
+  margin-top: 0;
+  border: 1px solid black;
+}
+
+.btn-div a {
+  text-decoration: none;
+  color: black;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 10px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.input-form input,
+.input-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+.input-form .submit {
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 18px;
+}
