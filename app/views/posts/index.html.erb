@@ -1,3 +1,13 @@
+<div>
+    <button>
+      <%=link_to 'Back', root_path %>
+    </button>
+
+    <button>
+      <%=link_to 'Create new Post', new_user_post_path(user_id: @user.id) %>
+    </button>
+</div>
+
 <%= render @user %>
 
 <ul class="user-main">

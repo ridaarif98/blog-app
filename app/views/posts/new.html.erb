@@ -1,0 +1,15 @@
+<%= form_with model:[@user] do |f|%>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %><br>
+
+    <%= f.label :text %><br>
+    <%= f.text_field :text %><br>
+
+    <%= f.submit "Create Post" %>
+<%end%>
+
+<div>
+    <button>
+        <%=link_to 'Back', root_path%>
+    </button>
+</div>

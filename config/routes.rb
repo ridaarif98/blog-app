@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   # Nested routes allow you to capture this relationship in your routing
 
   resources :users, only: %i[index show] do
-    resources :posts, only: %i[index show]
+    resources :posts, only: [:index, :show, :new, :create]
   end
 end
