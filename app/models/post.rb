@@ -5,6 +5,7 @@ class Post < ApplicationRecord
 
   validates :title, presence: true, length: { maximun: 250 }
   validates :comments_counter,numericality: {only_integer: true, greater_than_or_equal_to: 0}
+  validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0}
 
   # Registers a callback to be called after a record is created
   after_create :update_post_counter
