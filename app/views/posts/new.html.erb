@@ -1,9 +1,9 @@
 <%= form_with  model:[@user, @user.posts.build], class:"input-form"  do |f|%>
     <%= f.label :title %><br>
-    <%= f.text_field :title %><br>
+    <%= f.text_field :title,  {:required => true}%><br>
 
     <%= f.label :text %><br>
-    <%= f.text_area :text %><br>
+    <%= f.text_area :text , {:required => true}%><br>
 
     <%= f.submit "Create Post", class: "submit" %>
 <%end%>

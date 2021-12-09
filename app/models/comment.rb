@@ -2,6 +2,7 @@ class Comment < ApplicationRecord
   belongs_to :user
   belongs_to :post
 
+  validates :text, presence: true, length: { minimum: 3 }
   # Registers a callback to be called after a record is created
   after_create :update_comment_counter
 
