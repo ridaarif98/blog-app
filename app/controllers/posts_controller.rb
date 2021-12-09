@@ -1,14 +1,16 @@
 # Posts controller
 class PostsController < ApplicationController
   def index
-    @user = User.find(params[:user_id])
-    @posts = @user.posts
+    @user = User.where(id: params[:user_id]).includes(:posts).take
+    # @user = User.find(params[:user_id])
+    # @posts = @user.posts
   end
 
   def show
-    @user = User.find(params[:user_id])
-    @posts = @user.posts
-    @post = Post.find(params[:id])
+    # @user = User.find(params[:user_id])
+    # @posts = @user.posts
+    @post = Post.where(id: params[:id]).includes(:comments).take
+    # @post = Post.find(params[:id])
   end
 
   def new
@@ -19,7 +21,6 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_parameters)
     if @post.save
       flash[:notice] = "Post created successfully."
-      # redirect_back(fallback_location: root_path)
       redirect_to user_post_path(user_id: @post.user_id, id: @post.id)
     else
       render :new

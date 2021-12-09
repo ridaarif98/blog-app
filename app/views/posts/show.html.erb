@@ -1,11 +1,13 @@
 <% flash.each do |name, msg| -%>
     <%= content_tag :div, msg, class: name %>
 <% end %>
+
+
 <div class="show-post">
     <div class="show-post-user">
     <div>
       <h2>
-      Post #<%= @posts.find_index(@post) +1 %> by:   <%= @post.user.name%>
+      Post #<%= @post.title %> by:   <%= @post.user.name%>
       </h2>
       <p>Comments: <%=@post.comments_counter.to_i%> Likes: <%=@post.likes_counter.to_i%></p>
     </div>
@@ -26,4 +28,9 @@
 <div>
 <%= render partial: 'comments/form'%>
 <%= render partial: 'likes/form'%>
+<div class="btn-div">
+    <button class="back-btn">
+        <%=link_to 'Back', user_posts_path(@post.user)%>
+    </button>
+</div>
 </div>
