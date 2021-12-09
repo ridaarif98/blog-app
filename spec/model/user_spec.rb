@@ -36,4 +36,12 @@ RSpec.describe User, type: :model do
             expect(subject).to be_valid
         end
     end
+
+    describe 'validates recent_posts method' do
+        before {10.times { |i| Post.create(user:subject, title: 'post#{i}')}}
+
+        it 'should get last 5 comments' do
+            expect(subject.recent_posts).to eq(subject.posts.last(3))
+        end
+    end
 end
