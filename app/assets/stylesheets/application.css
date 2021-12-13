@@ -177,3 +177,41 @@
   border-radius: 6px;
   font-size: 18px;
 }
+
+.login-form {
+  display: flex;
+  flex-direction:  column;  
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  width: 100%;
+  display: flex;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form > * {
+  width: 60%;
+  margin-block: 10px;
+  padding: 10px 10px;
+}
+
+.actions > * {
+  width: 40%;
+  align-self: center;
+}
+
+.options {
+  width: 25%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.login-heading {
+  text-align: center;
+}
