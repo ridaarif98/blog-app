@@ -64,6 +64,13 @@ rspec
 - Twitter: [@ridaarif](https://twitter.com/Rida29984906)
 - LinkedIn: [Rida Arif](https://www.linkedin.com/in/rida-arif-90945520b/)
 
+👤 **Faizan Zahid**
+
+- GitHub: [@faizi2500 ](https://github.com/faizi2500)
+- Angelist: [@faizan_2500 ](https://angel.co/u/faizan2500)
+- LinkedIn: [@faizan2500](www.linkedin.com/in/faizan2500)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

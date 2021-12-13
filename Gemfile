@@ -3,9 +3,8 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'pry'
 gem 'rails-controller-testing'
 gem 'rspec-rails', group: %i[development test]
-# group :development, :test do
-#   gem 'rspec-rails', '~> 5.0.0'
-# end
+
+gem 'devise'
 
 # Or, run against the main branch
 # (requires main-branch versions of all related RSpec libraries)
