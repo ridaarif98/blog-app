@@ -25,6 +25,22 @@ nav {
   gap: 20px;
 }
 
+.btn-div a {
+  text-decoration: none;
+  color: black;
+}
+
+.user-main a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
 .nav-bar li a {
   text-decoration: none;
   font-size: 20px;
@@ -42,11 +58,6 @@ nav {
   display: flex;
   flex-direction: row;
   margin: 10px;
-}
-
-.user-main a {
-  text-decoration: none;
-  color: black;
 }
 
 .user-main img {
@@ -116,12 +127,6 @@ nav {
   margin-left: 40%;
 }
 
-.btn a {
-  text-decoration: none;
-  font-size: 20px;
-  color: black;
-}
-
 .show-post {
   display: flex;
   flex-direction: column;
@@ -164,11 +169,6 @@ nav {
   border: 1px solid black;
 }
 
-.btn-div a {
-  text-decoration: none;
-  color: black;
-}
-
 .input-form {
   display: flex;
   flex-direction: column;
@@ -196,7 +196,7 @@ nav {
 
 .login-form {
   display: flex;
-  flex-direction:  column;  
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
