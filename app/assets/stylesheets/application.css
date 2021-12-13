@@ -231,3 +231,15 @@ nav {
 .login-heading {
   text-align: center;
 }
+
+.login-headingone {
+  text-align: center;
+}
+
+.login-headingone > * {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
