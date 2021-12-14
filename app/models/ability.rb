@@ -14,6 +14,10 @@ class Ability
         can :destroy, Comment do |comment|
           comment.user.id = user.id
         end
+
+        can :destroy, Post do |post|
+          post.user.id = user.id
+        end
       end
     
     # The first argument to `can` is the action you are giving the user

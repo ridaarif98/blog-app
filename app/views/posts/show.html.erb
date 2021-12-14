@@ -9,7 +9,15 @@
       <h2>
       Post #<%= @post.user.posts.find_index(@post)+1 %> by:   <%= @post.user.name%>
       </h2>
-      <p>Comments: <%=@post.comments_counter.to_i%> Likes: <%=@post.likes_counter.to_i%></p>
+      <p>
+      Comments: <%=@post.comments_counter.to_i%> Likes: <%=@post.likes_counter.to_i%>
+      <%if can? :destroy, @post%>
+      <button>
+        <%=link_to "Delete", @post, method: :delete%>
+      </button>
+      <%end%>
+      
+      </p>
     </div>
 
     <p><%=@post.text%></p>
@@ -19,6 +27,11 @@
                 <p>
                     <%=comment.user.name%> :
                     <%= comment.text%>
+                    <%if can? :destroy, comment%>
+                    <button>
+                        <%=link_to "Delete", comment, method: :delete%>
+                    </button>
+                    <%end%>
                 </p>
             <%end%>
     </div>
