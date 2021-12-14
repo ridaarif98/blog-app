@@ -1,7 +1,14 @@
 # Posts controller
 class PostsController < ApplicationController
   def index
-    @user = User.where(id: params[:user_id]).includes(:posts).take
+    # @user = User.where(id: params[:user_id]).includes(:posts).take
+    if params[:user_id]
+      @user = User.find(params[:user_id])
+      calc_posts(@user)
+    else
+      @posts_by_user = Post.all
+      render 'allposts'
+    end
   end
 
   def show
@@ -9,12 +16,12 @@ class PostsController < ApplicationController
   end
 
   def new
-    @user = User.find_by(id: params[:user_id])
+    @user = current_user
+    @post = Post.new
   end
 
   def create
-    @user = User.find_by(id: params[:user_id])
-    @post = @user.posts.build(post_parameters)
+    @post = Post.new(post_parameters)
     if @post.save
       flash[:notice] = 'Post created successfully.'
       redirect_to user_post_path(user_id: @post.user_id, id: @post.id)
@@ -34,6 +41,6 @@ class PostsController < ApplicationController
   private
 
   def post_parameters
-    params.require(:post).permit(:title, :text)
+    params.require(:post).permit(:title, :text, :user_id)
   end
 end
