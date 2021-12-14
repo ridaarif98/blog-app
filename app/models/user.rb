@@ -21,6 +21,6 @@ class User < ApplicationRecord
   private
 
   def set_role
-    self.update(role: "user")
+    update(role: 'user')
   end
 end

@@ -11,7 +11,7 @@
         <li class="post-all">
         <h4>Post #<%=i+1%></h4>
         <p><%= post.text%></p>
-        <p class="show-li">Coments : <%= post.comments_counter.to_i%> Likes : <%= post.likes_counter.to_i %> </p>
+        <p class="show-li">Coments : <%= post.comments.size%> Likes : <%= post.likes_counter.to_i %> </p>
         </li>
     <%end%>
 </ul>
