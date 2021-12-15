@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Like, type: :model do
   describe 'Update like counter' do
-    let(:user) { User.create(name: 'Rida') }
+    let(:user) { User.create(name: 'Rida', email: 'example@mail.com', password: 'password') }
     let(:post) { user.posts.create(title: 'Test', text: 'This is test post', user: user) }
     let(:like) { Like.create(user_id: user.id, post_id: post.id) }
 

@@ -5,10 +5,10 @@ RSpec.describe 'Users', type: :request do
 
   let(:user) { User.create(name: 'Cork', email: 'example@mail.com', password: 'password') }
   describe 'GET #index' do
-  before do
-    sign_in user
-    get users_path
-  end
+    before do
+      sign_in user
+      get users_path
+    end
     it 'should return response status correct (ok)' do
       expect(response).to have_http_status(:ok)
     end
@@ -19,10 +19,10 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'GET #show' do
-  before do
-    sign_in user
-    get user_path(user)
-  end
+    before do
+      sign_in user
+      get user_path(user)
+    end
     it 'should return response status correct (ok)' do
       expect(response).to have_http_status(:ok)
     end
