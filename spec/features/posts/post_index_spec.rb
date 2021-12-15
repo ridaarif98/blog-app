@@ -59,8 +59,8 @@ RSpec.feature 'User Show', type: :feature do
   end
 
   it 'Navigate to the specific post' do
-       click_link('Post #1')
-    expect(page).to have_current_path("/users/#{@first_user.id}/posts/#{@post_one.id}")
+       click_link('Post #4')
+    expect(page).to have_current_path("/users/#{@first_user.id}/posts/#{@post_four.id}")
   end
 
 end
