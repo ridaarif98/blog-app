@@ -4,10 +4,14 @@ RSpec.feature 'User Show', type: :feature do
     @first_user = User.create(name: 'Rous', email: 'other@example.com', password: 'rous12')
     @second_user = User.create(name: 'Ali', email: 'ali@example.com', password: '123456')
     @third_user = User.create(name: 'Ahmed', email: 'ahmed@example.com', password: '1234ahmed')
-    @post_one = Post.create(title: 'motivation', text: 'Never give up', comments_counter: 0, likes_counter: 0, user: @first_user)
-    @post_two = Post.create(title: 'motivation', text: 'Second Post', comments_counter: 0, likes_counter: 0, user_id: @first_user.id)
-    @post_three = Post.create(title: 'motivation', text: 'Never give up post 3', comments_counter: 0, likes_counter: 0, user_id: @first_user.id)
-    @post_four = Post.create(title: 'motivation', text: 'Never give up post 4', comments_counter: 0, likes_counter: 0, user_id: @first_user.id)
+    @post_one = Post.create(title: 'motivation', text: 'Never give up', comments_counter: 0, likes_counter: 0,
+                            user: @first_user)
+    @post_two = Post.create(title: 'motivation', text: 'Second Post', comments_counter: 0, likes_counter: 0,
+                            user_id: @first_user.id)
+    @post_three = Post.create(title: 'motivation', text: 'Never give up post 3', comments_counter: 0, likes_counter: 0,
+                              user_id: @first_user.id)
+    @post_four = Post.create(title: 'motivation', text: 'Never give up post 4', comments_counter: 0, likes_counter: 0,
+                             user_id: @first_user.id)
     5.times { |a| Comment.create(user_id: @second_user.id, post_id: @post_one.id, text: "Hello#{a}") }
     4.times { |a| Comment.create(user_id: @third_user.id, post_id: @post_three.id, text: "Comment#{a}") }
     3.times { |a| Comment.create(user_id: @first_user.id, post_id: @post_two.id, text: "I like it#{a}") }
@@ -59,8 +63,7 @@ RSpec.feature 'User Show', type: :feature do
   end
 
   it 'Navigate to the specific post' do
-       click_link('Post #4')
+    click_link('Post #4')
     expect(page).to have_current_path("/users/#{@first_user.id}/posts/#{@post_four.id}")
   end
-
 end

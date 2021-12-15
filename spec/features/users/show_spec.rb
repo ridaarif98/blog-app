@@ -4,10 +4,14 @@ RSpec.feature 'User Show', type: :feature do
     @first_user = User.create(name: 'Rous', email: 'other@example.com', password: 'rous12')
     @second_user = User.create(name: 'Ali', email: 'ali@example.com', password: '123456')
     @third_user = User.create(name: 'Ahmed', email: 'ahmed@example.com', password: '1234ahmed')
-    @post_one = Post.create(title: 'motivation', text: 'Never give up', comments_counter: 0, likes_counter: 0, user_id: @first_user.id)
-    @post_two = Post.create(title: 'motivation', text: 'Second Post', comments_counter: 0, likes_counter: 0, user_id: @first_user.id)
-    @post_three = Post.create(title: 'motivation', text: 'Never give up post 3', comments_counter: 0, likes_counter: 0, user_id: @first_user.id)
-    @post_four = Post.create(title: 'motivation', text: 'Never give up post 4', comments_counter: 0, likes_counter: 0, user_id: @first_user.id)
+    @post_one = Post.create(title: 'motivation', text: 'Never give up', comments_counter: 0, likes_counter: 0,
+                            user_id: @first_user.id)
+    @post_two = Post.create(title: 'motivation', text: 'Second Post', comments_counter: 0, likes_counter: 0,
+                            user_id: @first_user.id)
+    @post_three = Post.create(title: 'motivation', text: 'Never give up post 3', comments_counter: 0, likes_counter: 0,
+                              user_id: @first_user.id)
+    @post_four = Post.create(title: 'motivation', text: 'Never give up post 4', comments_counter: 0, likes_counter: 0,
+                             user_id: @first_user.id)
 
     visit user_session_path
     fill_in 'email', with: 'other@example.com'

@@ -2,12 +2,11 @@ require 'rails_helper'
 RSpec.feature 'User Show', type: :feature do
   before(:each) do
     @first_user = User.create(name: 'Rous', email: 'other@example.com', password: 'rous12')
-    
+
     @post_one = Post.create(title: 'motivation', text: 'Never give up', user_id: @first_user.id)
-  
+
     5.times { |a| Comment.create(user_id: @first_user.id, post_id: @post_one.id, text: "Hello#{a}") }
-    @comment = Comment.create(user_id: @first_user.id, post_id: @post_one.id, text: "Hello")
-    
+    @comment = Comment.create(user_id: @first_user.id, post_id: @post_one.id, text: 'Hello')
 
     Like.create(user_id: @first_user.id, post_id: @post_one.id)
     visit user_session_path
