@@ -17,7 +17,6 @@
         
             <h4>Post #<%=i+1%></h4>
         <% end %>
-            <p><%=post.id%></p>
             <p><%= post.title%></p>
             <p><%= post.text%></p>
             <p class="show-li">Comments : <%= post.comments.size%>  Likes : <%= post.likes_counter.to_i %> </p>
