@@ -1,4 +1,7 @@
-<%= form_with  model:[@user, @user.posts.build], class:"input-form"  do |f|%>
+<%= form_with  model:@post, class:"input-form"  do |f|%>
+
+    <%= f.hidden_field :user_id, value: @user.id %>
+    
     <%= f.label :title %><br>
     <%= f.text_field :title,  {:required => true}%><br>
 
