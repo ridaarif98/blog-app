@@ -1,13 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  describe 'Update like counter' do
-    let(:user) { User.create(name: 'Rida') }
-    let(:post) { Post.create(title: 'Test', text: 'This is test post', user_id: user.id) }
-    let(:comment) { Comment.create(user_id: user.id, post_id: post.id) }
+  describe '#update_counter' do
+    let(:user) { User.create(name: 'Kolly', email: 'kolly@mail.com', password: 'password') }
+    let(:post) { Post.create(title: 'Post', text: 'Hello', user_id: user.id) }
 
     it 'should like counter for post' do
-      expect(comment.update_comment_counter).to eq true
+      expect(post.comments_counter).to eq 0
     end
   end
 end
