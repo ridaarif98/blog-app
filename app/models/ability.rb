@@ -12,6 +12,7 @@ class Ability
       can :destroy, Comment do |comment|
         comment.user.id == user.id
       end
+      can :create, [Comment, Post]
 
       can :destroy, Post do |post|
         post.user.id == user.id
