@@ -6,6 +6,9 @@ gem 'rspec-rails', group: %i[development test]
 
 gem 'devise'
 
+gem 'devise-jwt'
+gem 'rswag'
+
 # Or, run against the main branch
 # (requires main-branch versions of all related RSpec libraries)
 # group :development, :test do
