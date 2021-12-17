@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
   devise_for :users
   root 'users#index'
   get 'posts/index'
@@ -24,8 +26,10 @@ Rails.application.routes.draw do
   resources :comments, only: [:destroy]
 
   namespace :api, defaults: { format: :json } do
-    resources :posts, only: [:index] do
-      resources :comments, only: [:create, :index]
+    namespace :v1 do
+      resources :posts, only: [:index] do
+        resources :comments, only: [:create, :index]
+      end
     end
   end
 end
